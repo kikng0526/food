@@ -1,0 +1,48 @@
+<%# fontawesome %>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<%# fontawesome %>
+<div class = "account-main">
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--left account-page__header'>
+      <h2>Create Account</h2>
+    </div>
+    <div class='account-page__inner--right user-form'>
+      <%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        
+        <div class='field'>
+          <div class='field-label'>
+            <i class="fas fa-signature"></i>
+            <%= f.label :username%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :username, :placeholder => "username",autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <i class="fas fa-pen-square"></i>
+            <%= f.label :nickname%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :nickname, :placeholder => "nickname", autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <i class="fas fa-envelope-square"></i>
+            <%= f.label :email%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email, :placeholder => "email" %>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "UPDATE", class: 'btn'%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
