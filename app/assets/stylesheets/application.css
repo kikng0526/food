@@ -140,6 +140,10 @@ button {
   box-sizing: border-box;
   width: 100%;
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-color:whitesmoke;
 }
 
 .header-inner {
@@ -151,6 +155,10 @@ button {
   padding: 0 0.8em;
   margin: 0 auto;
   font-size: 1.2em;
+}
+
+header {
+  position: fixed;
 }
 
 .header-nav {

@@ -14,12 +14,22 @@
       <img src="" />
     </div>
     <nav class="header-nav">
+    <% if user_signed_in? %>
+      <div class="header-nav-item">
+        <a><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "header-button header-post"%></a>
+      </div>
+      <div class="header-nav-item">
+        <a><%= link_to 'ログアウト',"/users/sign_out", class: "header-button header-login"%></a>
+      </div>
+    <% else %>
       <div class="header-nav-item">
         <a><%= link_to '新規登録', "/users/sign_up", class: "header-button header-post"%></a>
       </div>
       <div class="header-nav-item">
         <a><%= link_to 'ログイン',"/users/sign_in", class: "header-button header-login"%></a>
       </div>
+    <% end %>
+
     </nav>
   </div>
 </header>
